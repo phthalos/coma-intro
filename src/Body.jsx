@@ -1,4 +1,9 @@
 import "/css/Body.css";
+// 이미지 경로 하나하나 찾아쓰기 귀찮아서 vite가 자동으로 처리하도록 시켰다
+// 일반 html은 이렇게 하지 않습니다
+import profile from "./assets/profile.png";
+import consult from "./assets/consult.png";
+import making from "./assets/making.png";
 
 function Body() {
     return (
@@ -7,7 +12,7 @@ function Body() {
             {/* 프로필사진 + 자기소개 컴포넌트 */}
             <ul className="profileWrapper">
                 {/* 프로필 사진 (public 폴더) */}
-                <img src="/profile.png" className="profile" />
+                <img src={profile} className="profile" />
                 <ul>
                     <h1>김예제 xample</h1>
                     <li>✦ I am creative Person</li>
@@ -54,7 +59,7 @@ function Body() {
                     <li>
                         {/* 이미지에 링크 걸기 */}
                         <a href="#">
-                            <img src="/consult.png" />
+                            <img src={consult} />
                         </a>
                         <a href="#">
                             <h3>컨설팅 웹 서비스</h3>
@@ -65,7 +70,7 @@ function Body() {
                     {/* 두 번째 작업물 */}
                     <li>
                         <a href="#">
-                            <img src="/making.png" />
+                            <img src={making} />
                         </a>
                         <a href="#">
                             <h3>또 다른 웹 서비스</h3>

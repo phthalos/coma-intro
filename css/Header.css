@@ -1,0 +1,26 @@
+/* Header 컴포넌트 전체 적용 디자인 */
+.headerWrapper {
+    display: flex;
+    margin-top: 12px;
+    position: fixed;
+    width: 600px;
+    top: 0;
+}
+@media only screen and (max-width: 600px) {
+    .headerWrapper {
+        width: -webkit-fill-available;
+        left: 0;
+        margin: 15px 30px;
+    }
+}
+/* 상단 제목 (자기소개 페이지) */
+.title {
+    margin-right: auto;
+}
+/* 상단 연락처 */
+.contacts {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    right: 0;
+}

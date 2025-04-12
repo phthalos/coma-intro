@@ -1,0 +1,59 @@
+/* 모바일 버전(화면 너비 600px 이하)에만 추가로 적용되는 css */
+@media only screen and (max-width: 600px) {
+    /* 프로필 사진 컴포넌트와 자기소개 컴포넌트를 세로로 배치합니다 */
+    .profileWrapper {
+        flex-direction: column;
+        margin: 0;
+        gap: 10px;
+    }
+}
+.bodyWrapper {
+    max-width: 600px;
+    margin: 80px auto;
+    display: flex;
+    flex-direction: column;
+}
+.profileWrapper {
+    display: flex;
+    gap: 30px;
+    margin: 0 auto;
+    align-items: center;
+}
+.profile {
+    width: 200px;
+    border: 3px solid;
+    border-radius: 100px;
+    background-color: lemonchiffon;
+}
+.intro span::before {
+    content: "✦";
+    margin-right: 5px;
+}
+.intro span {
+    display: block;
+    margin-left: 30px;
+}
+.intro a {
+    text-decoration: underline;
+}
+.intro h3 {
+    margin-top: 15px;
+}
+.portfolio {
+    display: flex;
+    gap: 12px;
+}
+.portfolio > li {
+    display: inline-block;
+    transition-duration: 0.3s;
+}
+.portfolio > li:hover {
+    transform: scale(1.05);
+    transition-duration: 0.3s;
+}
+.portfolio img {
+    width: 100%;
+}
+.portfolio span {
+    display: block;
+}

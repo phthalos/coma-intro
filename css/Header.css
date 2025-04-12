@@ -1,17 +1,21 @@
 /* Header 컴포넌트 전체 적용 디자인 */
-.headerWrapper {
-    display: flex;
-    margin-top: 12px;
-    position: fixed;
-    width: 600px;
-    top: 0;
-}
+/* 모바일 버전(화면 너비 600px 이하)에만 추가로 적용되는 css */
 @media only screen and (max-width: 600px) {
     .headerWrapper {
         width: -webkit-fill-available;
+        width: -moz-available;
         left: 0;
         margin: 15px 30px;
     }
+}
+.headerWrapper {
+    display: flex;
+    margin-top: 12px;
+    /* 스크롤을 내려도 사라지지 않고, 같은 위치에 고정시키는 속성 */
+    position: fixed;
+    /* fixed를 적용하면 다른 요소의 영향을 벗어나 독립적으로 행동하게 된다. 그래서 너비와 위치도 새로 지정해주어야 한다 */
+    width: 600px;
+    top: 0;
 }
 /* 상단 제목 (자기소개 페이지) */
 .title {
@@ -23,4 +27,7 @@
     gap: 10px;
     position: absolute;
     right: 0;
+}
+a {
+    text-decoration: none;
 }

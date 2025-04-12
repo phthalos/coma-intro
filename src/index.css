@@ -1,7 +1,15 @@
+/* 웹폰트 불러오기 (프리텐다드) */
+@font-face {
+    font-family: "Pretendard-Regular";
+    src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
 /* 홈페이지 전체에 공통적으로 적용되는 디자인 */
 body {
-    /* 폰트 계열 (산세리프(명조, 바탕체가 아닌 돋움체 계열)) */
-    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    /* 폰트 계열 (프리텐다드 최우선, 적용 실패 시 산세리프 또는 돋움체 계열 적용) */
+    font-family: Pretendard, system-ui, Avenir, Helvetica, Arial, sans-serif;
     /* 행간 */
     line-height: 1.5;
     /* 글자 두께 */
@@ -14,14 +22,18 @@ body {
 }
 ul,
 li {
+    /* <li>를 쓰면 기본적으로 왼쪽에 붙는 점 제거 */
     list-style: none;
+    /* 기본 여백 제거 */
     padding: 0;
     margin: 0;
 }
 a {
     color: inherit;
+    /* 링크 기본 밑줄 제거 */
     text-decoration: none;
 }
+/* 링크 위에 마우스커서를 올리면 적용될 css */
 a:hover {
     color: lemonchiffon;
     background-color: darkolivegreen;
@@ -29,5 +41,6 @@ a:hover {
 }
 h1,
 h3 {
+    /* 기본 여백 제거 */
     margin: 0;
 }
